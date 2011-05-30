@@ -55,6 +55,7 @@ int main() {
 				sprintf(cmd, "kill %d", pid);
 				LOGD("[inf] found pppd with pid %d, do: '%s'", pid, cmd);
 				system(cmd);
+                                free(cmd);
 			}
 			free(buf);
 			fclose(f);
